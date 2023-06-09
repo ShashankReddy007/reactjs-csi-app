@@ -3,21 +3,21 @@ import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import AddTutorial from "./components/AddTutorial";
-import Tutorial from "./components/Tutorial";
-import TutorialsList from "./components/TutorialsList";
+import AddImprovement from "./components/AddImprovement";
+import Improvement from "./components/Improvement";
+import ImprovementsList from "./components/ImprovementsList";
 
 function App() {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/tutorials" className="navbar-brand">
-          bezKoder
+        <a href="/improvements" className="navbar-brand">
+          CSI
         </a>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to={"/tutorials"} className="nav-link">
-              Tutorials
+            <Link to={"/improvements"} className="nav-link">
+              Improvements
             </Link>
           </li>
           <li className="nav-item">
@@ -30,10 +30,10 @@ function App() {
 
       <div className="container mt-3">
         <Routes>
-          <Route path="/" element={<TutorialsList/>} />
-          <Route path="/tutorials" element={<TutorialsList/>} />
-          <Route path="/add" element={<AddTutorial/>} />
-          <Route path="/tutorials/:id" element={<Tutorial/>} />
+          <Route path="/" element={<ImprovementsList/>} />
+          <Route path="/improvements" element={<ImprovementsList/>} />
+          <Route path="/add" element={<AddImprovement/>} />
+          <Route path="/improvements/:id" element={<Improvement/>} />
         </Routes>
       </div>
     </div>
